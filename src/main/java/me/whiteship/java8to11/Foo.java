@@ -58,7 +58,7 @@ public class Foo {
         System.out.println(get10);
 
         //어떠한 인자를 받아서 t/f 리턴
-        Predicate<String> startsWithKeesun = (s) -> s.startsWith("keesun")
+        Predicate<String> startsWithKeesun = (s) -> s.startsWith("keesun");
         //기선으로 시작하는지 확인
         Predicate<Integer> isEven = (i) -> i%2 == 0;
         //startsWithKeesun.or 등 으로 조합할 수 있다.
