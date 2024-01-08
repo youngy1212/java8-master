@@ -16,14 +16,14 @@ public class OptionalAPI {
         .filter(oc -> oc.getTitle().startsWith("jpa"))
         .findFirst();
 
-        // boolean present = optional.isPresent();
-        // System.out.println(present);
+        boolean present = optional.isPresent();
+        System.out.println(present);
 
-        // OnlineClass onlineClass = optional.get(); //값가져오기
-        // System.out.println(onlineClass.getTitle());
+        OnlineClass onlineClass = optional.get(); //값가져오기
+        System.out.println(onlineClass.getTitle());
 
 
-        //optional.ifPresent(oc ->  System.out.println(onlineClass.getTitle()));
+        optional.ifPresent(oc ->  System.out.println(onlineClass.getTitle()));
         //있을 경우
 
         OnlineClass onlineClass2 = optional.orElseGet(OptionalAPI::createNewClasss);
